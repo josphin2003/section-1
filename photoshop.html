@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Process</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="./style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+      
+
+        .menu-toggle {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #202b68;
+            border: none;
+            color: #fff;
+        }
+
+        .menu-toggle:hover,
+        .menu-toggle:focus {
+            background: #141cab;
+            color: #fff;
+        }
+
+        .page-layout {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 18px;
+            width: 100%;
+        }
+
+        .category-sidebar {
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 350px;
+            width: 350px;
+            min-width: 0;
+            min-height: calc(100vh - 36px);
+            height: auto;
+            padding: 18px 14px;
+            background: #D6E6F5;
+            border-radius: 16px;
+            position: relative;
+            top: auto;
+            left: auto;
+            z-index: 1;
+            overflow-y: auto;
+            box-shadow: 5px 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Show categories as a flex column when opened */
+        .category-sidebar.collapse.show {
+            display: flex;
+        }
+
+        .category-heading {
+            color: #202b68;
+            padding: 8px 10px 18px;
+        }
+
+        .category-heading h5 {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .category-sidebar .accordion-item {
+            margin-bottom: 10px;
+            overflow: hidden;
+            border: 0;
+            border-radius: 9px;
+        }
+
+        .category-sidebar .accordion-button::after {
+            display: none;
+        }
+
+        .category-sidebar .accordion-button:not(.collapsed) {
+            color: #202b68;
+            background: #ffffff;
+        }
+
+        .category-sidebar .accordion-body {
+            background: #ffffff;
+        }
+
+        .category-links {
+            margin: 0;
+            padding-left: 20px;
+            color: #404b68;
+            line-height: 2.2;
+        }
+
+        .slide-content {
+            flex: 1 1 0;
+            min-width: 0;
+            width: 100%;
+        }
+
+        #carouselExampleContent {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .carousel-inner {
+            overflow: hidden;
+        }
+
+        .carousel-item>div {
+            max-width: 100%;
+        }
+
+        
+        .slide-nav-btn {
+            background-color: #202b68;
+            color: #ffffff;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .slide-nav-btn:hover {
+            background-color: #141cab;
+            color: #ffffff;
+        }
+
+        @media (max-width: 767.98px) {
+            .page-layout {
+                display: block;
+                padding: 10px;
+            }
+
+            .category-sidebar {
+                width: 100%;
+                min-height: auto;
+                margin-bottom: 15px;
+            }
+
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CATEGORIES AND MAIN CONTENT -->
+    <div class="page-layout" id="pageLayout">
+
+        <!-- CATEGORIES SIDEBAR -->
+        <aside class="category-sidebar collapse" id="categorySidebar">
+            <div class="logo-section">
+                <img src="./TCP LOGO 8.png" alt="TCP Logo" class="logo">
+            </div>
+            
+            <div class="logo-divider"></div>
+
+            <div class="category-heading">
+                <h5>PHOTOSHOP :</h5>
+            </div>
+
+            <div class="accordion" id="categoryAccordion">
+
+                <!-- UI/UX DESIGN -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header d-flex align-items-center">
+                                                <a href="index.html" class="accordion-button collapsed text-decoration-none">
+                                                                                <span class="category-icon"><i class="fa-solid fa-pen-ruler"></i></span>
+
+ <span class="category-title ms-2 text-nowrap">Expo Designs</span>
+                        </a>
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#uiuxMenu">
+                           
+                            <i class="fa-solid fa-caret-down dropdown-icon ms-auto"></i>
+                        </button>
+                    </h2>
+
+                    <div id="uiuxMenu" class="accordion-collapse collapse" data-bs-parent="#categoryAccordion">
+                        <div class="accordion-body">
+                            <ul class="category-links">
+                                <li>PROCESS DOCUMENTATION</li>
+                                <li>PROCESS OVERVIEW</li>
+                                <li><strong>STEP 01 -</strong> Expo Shortlisting & Team Update</li>
+                                <li><strong>STEP 02 - </strong>Mockup Landing Page Creation</li>
+                                <li><strong>STEP 03 - </strong>Website Analysis & Landing Page Structure</li>
+                                <li><strong>STEP 04 - </strong>Figma Design Process</li>
+                                <li><strong>STEP 04 - </strong>FIGMA DESIGN PROCESS: Empathize & Define</li>
+                                <li><strong>STEP 04 - </strong>FIGMA DESIGN PROCESS: Ideate & Design</li>
+                                <li><strong>STEP 04 - </strong>FIGMA DESIGN PROCESS: Prototype & Test</li>
+                                <li><strong>STEP 04 - </strong>FIGMA DESIGN PROCESS: Quality Check & Development Handoff</li>
+                                <li><strong>PROCESS SUMMARY - </strong>Expo to Development, End to End</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHOTOSHOP -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header d-flex align-items-center">
+                        <a href="photoshop.html" class="accordion-button collapsed text-decoration-none">
+                                                        <span class="category-icon"><i class="fa-solid fa-image"></i></span>
+                                                                                    <span class="category-title ms-2">PHOTOSHOP</span>
+                        </a>
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#photoshopMenu">
+                            <i class="fa-solid fa-caret-down dropdown-icon ms-auto"></i>
+                        </button>
+                    </h2>
+
+                    <div id="photoshopMenu" class="accordion-collapse collapse" data-bs-parent="#categoryAccordion">
+                        <div class="accordion-body">
+                            <ul class="category-links">
+                                <li>Image Editing</li>
+                                <li>Poster Design</li>
+                                <li>Background Removal</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sidebar-note mt-auto pt-3">
+                <i class="fa-solid fa-book-open me-2"></i>
+                <div>
+                    TCP Process Documentation<br>
+                    Select a topic to open its slide.
+                </div>
+            </div>
+        </aside>
+
+        <div class="slide-content" id="slideContent">
+            
+            <!-- NAVBAR  -->
+            <nav class="navbar navbar-light bg-white shadow-sm px-3 mb-4 rounded-4">
+                <div class="container-fluid d-flex align-items-center">
+                    <div class="vr mx-3 align-self-center" style="height: 45px; width: 2px; opacity: 0.5; background-color: #202b68;"></div>
+
+                    <div class="d-flex flex-column justify-content-center">
+                        <p class="mb-0 fw-bold">Process documentation</p>
+                       
+                    </div>
+
+                    <button class="btn menu-toggle rounded-circle ms-auto" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#categorySidebar" aria-controls="categorySidebar" aria-label="Toggle categories" aria-expanded="false">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- CAROUSEL  -->
+            <div id="carouselExampleContent" class="carousel slide mx-auto" style="width: 100%;">
+                
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="slideheading">
+                        <h1>PHOTOSHOP</h1>
+                        <p>Graphic Design Internship Training Program
+</p>
+                    </div>
+                </div>
+
+                <div class="carousel-inner rounded-5">
+
+                    <!-- SLIDE 1 -->
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-column justify-content-center bg-subtle-success p-5 bg-1 rounded-5 position-relative overflow-hidden"
+                            style="min-height: 600px; padding: 70px; background-color: #141a35;">
+
+                            <i class="fa-solid fa-circle cover-circle circle-top"
+                                style="position: absolute; color: #141cab; opacity: 1; z-index: 1; pointer-events: none; font-size: 290px; top: -50px; right: 20px;"></i>
+                            <i class="fa-solid fa-circle cover-circle circle-bottom"
+                                style="position: absolute;  color: #ff5b61;; opacity: 1; z-index: 2; pointer-events: none; font-size: 280px; top: 150px; left: 1000px; "></i>
+                                
+<div class="content" style="margin-bottom: 50px; position: relative; z-index: 2;">
+                                <span class="section"
+                                    style="display: inline-block; background: #ff5b61; color: white; font-size: 18px; font-weight: 700; padding: 10px 24px;">
+                                    WEEK 01
+                                </span>
+
+                                <h1
+                                class="mt-4" 
+                                 style="color: white;" class="mt-3";font-size: 55px;>Design Fundamentals
+                                    <br>
+& Photoshop Foundations</h1>
+                                <p class="fg-emphasis-secondary mb-5 mt-4 subtitle "  style="color: white; ">Graphic Design Internship Training Program
+</p>
+
+                                <div class="line mb-3"></div>
+
+                                <div class="tag">
+                                    <span style="color: #d2ddf7;">Introduction to Graphic Design</span>
+                                    <span class="dot" style="color: #f2a900; font-size: 20px;">•</span>
+                                    <span style="color: #d2ddf7;">Design Principles</span>
+                                                                            <span class="dot" style="color: #f2a900; font-size: 20px;">•</span>
+                                    <span style="color: #d2ddf7;">Color Theory</span>
+                                                                        <span class="dot" style="color: #f2a900; font-size: 20px;">•</span>
+                                                                                                            <span style="color: #d2ddf7;"> Typography</span>
+                                                                        <span class="dot" style="color: #f2a900; font-size: 20px;">•</span>
+                                             <span style="color: #d2ddf7;">Capstone Project</span>
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                   
+<div class="carousel-item">
+
+    <div class="d-flex flex-column justify-content-center bg-2 rounded-5"
+        style="height:600px; min-height:600px; padding:30px 35px; background-color:#ffffff;">
+
+        <!-- Heading -->
+        <div class="overview mb-3">
+
+            <span class="section"
+                style="color:#ff5b61; font-size:18px; font-weight:700; border-left:6px solid #ff5b61; padding-left:12px;">
+                AGENDA
+            </span>
+
+            <h2 style="color:#202b68; font-family:Poppins,serif; font-size:36px; font-weight:bold; margin-top:10px;">
+                Week 1 at a Glance
+            </h2>
+
+        </div>
+
+        <!-- Agenda Items -->
+        <div class="container-fluid px-0 my-3">
+
+            <div class="row g-3">
+
+                <!-- LEFT SIDE: 01 AND 02 -->
+                <div class="col-md-6">
+
+                    <!-- 01 -->
+                    <div class="d-flex align-items-center rounded-4 mb-3 overflow-hidden"
+                        style="min-height:80px; border:1px solid #141a35;">
+
+                        <div class="d-flex align-items-center justify-content-center"
+                            style="width:80px; min-height:80px; color:#141a35; font-size:28px; font-weight:700; flex-shrink:0;">
+                            01
+                        </div>
+
+                        <div class="p-3">
+                            <h5 style="color:#202b68; font-weight:700;">
+                                Introduction to Graphic Design
+                            </h5>
+                            <p class="mb-0" style="color:#141a35; font-size:14px;">
+                                Core concepts, raster vs. vector, color modes, resolution, file formats
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- 02 -->
+                    <div class="d-flex align-items-center rounded-4 mb-3 overflow-hidden"
+                        style="min-height:80px; border:1px solid #141a35;">
+
+                        <div class="d-flex align-items-center justify-content-center"
+                            style="width:80px; min-height:80px; color:#141a35; font-size:28px; font-weight:700; flex-shrink:0;">
+                            02
+                        </div>
+
+                        <div class="p-3">
+                            <h5 style="color:#202b68; font-weight:700;">
+                                Design Principles
+                            </h5>
+                            <p class="mb-0" style="color:#141a35; font-size:14px;">
+                                Alignment, balance, contrast, hierarchy, proximity and repetition
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE: 03 AND 04 -->
+                <div class="col-md-6">
+
+                    <!-- 03 -->
+                    <div class="d-flex align-items-center rounded-4 mb-3 overflow-hidden"
+                        style="min-height:80px; border:1px solid #141a35;">
+
+                        <div class="d-flex align-items-center justify-content-center"
+                            style="width:80px; min-height:80px; color:#141a35; font-size:28px; font-weight:700; flex-shrink:0;">
+                            03
+                        </div>
+
+                        <div class="p-3">
+                            <h5 style="color:#202b68; font-weight:700;">
+                                Color Theory
+                            </h5>
+                            <p class="mb-0" style="color:#141a35; font-size:14px;">
+                                Color wheel, harmonies, brand colors and color psychology
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- 04 -->
+                    <div class="d-flex align-items-center rounded-4 mb-3 overflow-hidden"
+                        style="min-height:80px; border:1px solid #141a35;">
+
+                        <div class="d-flex align-items-center justify-content-center"
+                            style="width:80px; min-height:80px; color:#141a35; font-size:28px; font-weight:700; flex-shrink:0;">
+                            04
+                        </div>
+
+                        <div class="p-3">
+                            <h5 style="color:#202b68; font-weight:700;">
+                                Typography
+                            </h5>
+                            <p class="mb-0" style="color:#141a35; font-size:14px;">
+                                Serif, sans-serif, font pairing, kerning, leading and hierarchy
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CENTER: 05 -->
+                <div class="col-md-6 mx-auto">
+
+                    <div class="d-flex align-items-center rounded-4 overflow-hidden"
+                        style="min-height:80px; border:1px solid #141a35;">
+
+                        <div class="d-flex align-items-center justify-content-center"
+                            style="width:80px; min-height:80px; color:#141a35; font-size:28px; font-weight:700; flex-shrink:0;">
+                            05
+                        </div>
+
+                        <div class="p-3">
+                            <h5 style="color:#202b68; font-weight:700;">
+                                Capstone Project
+                            </h5>
+                            <p class="mb-0" style="color:#141a35; font-size:14px;">
+                                Design an event poster and a social media post
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <p style="color:#758098; font-size:12px; line-height:1.6; margin-top:15px; margin-bottom:5px;">
+            Step 04 applies a Design Thinking approach (Empathize → Define → Ideate → Design → Prototype → Test) inside the Figma design phase.
+        </p>
+
+        <p style="color:#758098; font-size:12px; text-align:end; margin:0;">
+            02
+        </p>
+
+    </div>
+</div>
+
+
+                    <!-- SLIDE 3 -->
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column justify-content-center bg-subtle-warning p-5 bg-2 rounded-5"
+                            style="height:600px; min-height:600px; padding: 30px 40px; background-color: white;">
+
+                            <div class="overview mb-3">
+                                <span class="label" style="color: #e69a00; font-size: 15px; font-weight: 700;">STEP 01</span>
+                                <h2 style="color: #202b68; font-family:Poppins,sans-serif; font-size:32px; font-weight:bold; margin-top:8px;">
+                                    Expo Shortlisting ; Team Update
+                                </h2>
+                            </div>
+
+                            <div class="row align-items-center g-4">
+                                <div class="col-lg-5 col-md-12">
+                                    <p style="color: #202b68; font-size: 19px; line-height: 1.7; margin: 0;">
+                                        Once the shortlisted expo company is finalized, the Digital Marketing team records the selection in the shared tracking sheet — kicking off the design workflow for that company's landing page.
+                                    </p>
+                                </div>
+
+                                <div class="col-lg-7 col-md-12">
+                                    <div class="row align-items-center g-2">
+                                        <div class="col">
+                                            <div class="process-card"
+                                                style="height: 145px; background-color: #edf3fc; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; color: #202b68; font-size: 16px; font-weight: 700; box-shadow: 0 3px 7px rgba(0,0,0,0.10);">
+                                                Expo Company<br>Shortlisted
+                                            </div>
+                                        </div>
+
+                                        <div class="col-auto px-1">
+                                            <i class="fa-solid fa-right-long" style="color: #e69a00; font-size: 22px;"></i>
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="process-card"
+                                                style="min-height: 145px; background-color: #cadcfc; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; color: #202b68; font-size: 16px; font-weight: 700; box-shadow: 0 3px 7px rgba(0,0,0,0.10);">
+                                                Recorded in<br>Tracking Sheet
+                                            </div>
+                                        </div>
+
+                                        <div class="col-auto px-1">
+                                            <i class="fa-solid fa-right-long" style="color: #e69a00; font-size: 22px;"></i>
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="process-card"
+                                                style="height: 145px; background-color: #202b68; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; color: white; font-size: 16px; font-weight: 700; box-shadow: 0 3px 7px rgba(0,0,0,0.10); border-left: 5px solid #e69a00;">
+                                                Digital<br>Marketing<br>Team Updated
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 pt-2">
+                                <p style="color: #758098; font-size: 14px; font-style: italic;">
+                                    Outcome: every team has visibility into which expo accounts are in production.
+                                </p>
+                            </div>
+
+                            <div class="text-end mt-3">
+                                <span style="color: #758098; font-size: 14px;">03</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 4 -->
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column justify-content-center bg-subtle-warning p-5 bg-2 rounded-5"
+                            style="height:600px; min-height:600px; padding: 60px 65px; background-color: white;">
+
+                            <div class="overview mb-3">
+                                <span class="label" style="color: #e69a00; font-size: 15px; font-weight: 700;">STEP 02</span>
+                                <h2 style="color: #202b68; font-family: Poppins, serif; font-size: 32px; font-weight: bold; margin-top: 8px;">
+                                    Mockup Landing Page Creation
+                                </h2>
+                            </div>
+
+                            <div class="row align-items-center">
+                                <div class="col-12">
+                                    <p style="color: #202b68; font-size: 19px; line-height: 1.6; margin-bottom: 20px;">
+                                        For each website, a mockup landing page design is created. To build it, the design team reviews two core inputs before laying out the page.
+                                    </p>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="row align-items-center g-2">
+                                        <div class="col text-center">
+                                            <div class="process-card"
+                                                style="min-height: 148px; background-color: #eef3fc; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 10px; color: #202b68; font-size: 16px; font-weight: 700; box-shadow: 0 3px 7px rgba(0,0,0,0.10);">
+                                                <div class="number mb-2"
+                                                    style="width:50px; height:50px; background:#202b68; color:white; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:19px; font-weight:700;">
+                                                    01
+                                                </div>
+                                                <h6 class="fw-bold mb-1">The Product</h6>
+                                                <p class="mb-0" style="font-size: 13px; color: #202b68; font-weight: 400;">
+                                                    Understand the product being showcased at the expo — features, positioning, and audience.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-auto px-1">
+                                            <i class="fa-solid fa-right-long" style="color: #e69a00; font-size: 22px;"></i>
+                                        </div>
+
+                                        <div class="col text-center">
+                                            <div class="process-card"
+                                                style="min-height: 148px; background-color: #eef3fc; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 10px; color: #202b68; font-size: 16px; font-weight: 700; box-shadow: 0 3px 7px rgba(0,0,0,0.10);">
+                                                <div class="number mb-2"
+                                                    style="width:50px; height:50px; background:#202b68; color:white; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:19px; font-weight:700;">
+                                                    02
+                                                </div>
+                                                <h6 class="fw-bold mb-1">Production Script</h6>
+                                                <p class="mb-0" style="font-size: 13px; color: #202b68; font-weight: 400;">
+                                                    Review the product script written by the Animation team to align tone, story beats, and video content.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-auto px-1">
+                                            <i class="fa-solid fa-right-long" style="color: #e69a00; font-size: 22px;"></i>
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="process-card"
+                                                style="min-height: 148px; background-color: #202b68; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; color: white; font-size: 16px; font-weight: 700; box-shadow: 0 3px 7px rgba(0,0,0,0.10); border-left:5px solid #e69a00;">
+                                                Mockup<br>Landing Page
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <p style="color: #758098; font-size: 14px; font-style: italic;">
+                                    Outcome: every team has visibility into which expo accounts are in production.
+                                </p>
+                            </div>
+
+                            <div class="text-end mt-2">
+                                <span style="color: #758098; font-size: 13px;">04</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 5 -->
+                    <!-- SLIDE 5 -->
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column justify-content-center bg-subtle-warning p-9 bg-2 rounded-5"
+                            style="height:600px; min-height:600px; padding: 60px 65px; background-color: white;">
+
+                            <div class="overview mb-3">
+                                <span class="label" style="color: #e69a00; font-size: 15px; font-weight: 700;">
+                                    STEP 03
+                                </span>
+
+                                <h2
+                                    style="color: #202b68; font-family: Poppins, sans-serif; font-size: 32px; font-weight: bold; margin-top: 8px;">
+                                    Website Analysis & Landing Page Structure
+                                </h2>
+                            </div>
+
+                            <div class="row align-items-center">
+                                <div class="col-10">
+                                    <p style="color: #202b68; font-size: 19px; line-height: 1.6; margin-bottom: 20px;">
+                                        The existing website is analyzed page by page to define the landing page mockup
+                                        structure below </p>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-md-6 pe-4">
+                                        <div class="processs d-flex align-items-center mb-3 p-2 rounded-3"
+                                            style="background:#eef3fc; min-height:52px;">
+                                            <div 
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                01
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68;">Navbar</strong>
+                                        </div>
+                                        <div class="processs d-flex align-items-center mb-3 p-2 rounded-3"
+                                            style="background:#eef3fc; min-height:52px;">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                02
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68;">Hero Section</strong>
+                                            <small class="ms-auto " style="color: #758098;">with animation video</small>
+                                        </div>
+                                        <div class="processs d-flex align-items-center mb-3 p-2 rounded-3"
+                                            style="background:#eef3fc; min-height:52px;">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                03
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68;">About Us
+                                            </strong>
+                                        </div>
+                                        <div class="processs  d-flex align-items-center mb-3 p-2 rounded-3"
+                                            style="background:#eef3fc; min-height:52px;">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                04
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68;">360° View </strong>
+                                            <small class="ms-auto " style="color: #758098;">Animation / Production
+                                                team</small>
+                                        </div>
+                                        <div class="processs  d-flex align-items-center mb-3 p-2 rounded-3"
+                                            style="background:#eef3fc; min-height:52px;">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                05
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68;">5 Products Section</strong>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-auto d-none d-md-block">
+                                        <div style="height:300px; border-left:2px dashed #cadcfc;"></div>
+                                    </div>
+
+                                    <div class="col-md">
+                                        <div class="processs d-flex align-items-center mb-3 p-2 rounded-3"
+                                            style="background:#fff7e6; min-height:52px;">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                06
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68;">Video Clip 01 </strong>
+                                            <small class="ms-auto " style="color: #758098;">Animation / Production
+                                                team</small>
+
+                                        </div>
+                                        <div class="processs d-flex align-items-center mb-3 p-2 rounded-3"
+                                            style="background:#fff7e6; min-height:52px;">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                07
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68;">Section from Other
+                                                Pages</strong>
+                                            <small class="ms-auto " style="color: #758098;">varies by existing website
+                                            </small>
+
+                                        </div>
+                                        <div class="processs d-flex align-items-center mb-3 p-2 rounded-3"
+                                            style="background:#fff7e6; min-height:52px;">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                08
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68;">Video Clip 02 </strong>
+                                            <small class="ms-auto " style="color: #758098;">varies by existing website
+
+                                        </div>
+                                        <div class="processs d-flex align-items-center mb-3 p-2 rounded-3"
+                                            style="background:#fff7e6; min-height:52px;">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                09
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68;">News / Blog</strong>
+
+                                        </div>
+                                        <div class="processs d-flex align-items-center mb-3 p-2 rounded-3"
+                                            style="background:#fff7e6; min-height:52px;">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                10
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68;">Footer</strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-end mt-3">
+                                        <span style="color: #758098; font-size: 13px;">05</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!--slide 6-->
+                     <!--step 6-->
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column justify-content-center bg-2 rounded-5"
+                            style="height:600px; min-height:600px; min-height:570px; padding:30px 35px; background-color: #202b68">
+
+                            <!-- Heading -->
+                            <div class="overview mb-3">
+
+                                <span class="label" style="color: #e69a00; font-size: 15px; font-weight: 700;">
+                                    STEP 04
+                                </span>
+
+                                <h2
+                                    style="color:#ffffff; font-family:Poppins,sans-serif; font-size:36px; font-weight:bold; margin-top:10px;">
+                                    Figma Design Process
+                                </h2>
+                                <div class="row align-items-center">
+                                    <div class="col-10">
+                                        <p
+                                            style="color: #ffffff; font-size: 19px; line-height: 1.6; margin-bottom: 20px;">
+                                            The Step 03 structure is built directly in Figma, guided by a Design
+                                            Thinking approach.
+                                    </div>
+
+                                </div>
+
+                                <!-- Cards -->
+                                <div class="container-fluid px-0 my-3 ">
+
+                                    <div class="d-flex align-items-center justify-content-between gap-2 flex-nowrap">
+
+                                        <!-- Card 1 -->
+                                        <div class="card border-0 d-flex flex-column align-items-center justify-content-center text-cente"
+                                            style="flex:1; min-width:0; height:220px; background:#edf3fc; border-radius:12px; padding:20px 5px;">
+
+                                            <div class="number mx-auto mb-3 "
+                                                style="width:60px; height:60px; background:#202b68; color:white; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:19px; font-weight:700;border-left:5px solid #e69a00">
+                                                01
+                                            </div>
+
+                                            <h3 style="color:#202b68; font-size:25px; font-weight:700;">
+                                                Empathize
+                                            </h3>
+                                        </div>
+
+                                        <div style="color:#e69a00; font-size:20px; flex-shrink:0;">
+                                            <i class="fa-solid fa-right-long"></i>
+                                        </div>
+
+                                        <!-- Card 2 -->
+                                        <div class="card border-0 d-flex flex-column align-items-center justify-content-center text-cente"
+                                            style="flex:1; min-width:0; height:220px; background:#edf3fc; border-radius:12px; padding:20px 5px;">
+
+                                            <div class="number mx-auto mb-3"
+                                                style="width:60px; height:60px; background:#202b68; color:white; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:19px; font-weight:700;border-left:5px solid #e69a00">
+                                                02
+                                            </div>
+
+                                            <h3 style="color:#202b68; font-size:25px; font-weight:700;">
+                                                Define
+                                            </h3>
+                                        </div>
+
+                                        <div style="color:#e69a00; font-size:20px; flex-shrink:0;">
+                                            <i class="fa-solid fa-right-long"></i>
+                                        </div>
+
+                                        <!-- Card 3 -->
+                                        <div class="card border-0 d-flex flex-column align-items-center justify-content-center text-cente"
+                                            style="flex:1; min-width:0; height:220px; background:#edf3fc; border-radius:12px; padding:20px 5px;">
+
+                                            <div class="number mx-auto mb-3"
+                                                style="width:60px; height:60px; background:#202b68; color:white; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:19px; font-weight:700;border-left:5px solid #e69a00">
+                                                03
+                                            </div>
+
+                                            <h3 style="color:#202b68; font-size:25px; font-weight:700;">
+                                                Ideate
+                                            </h3>
+                                        </div>
+
+                                        <div style="color:#e69a00; font-size:20px; flex-shrink:0;">
+                                            <i class="fa-solid fa-right-long"></i>
+                                        </div>
+
+                                        <!-- Card 4 -->
+                                       
+
+                                
+
+                                        <!-- Card 5 -->
+                                        <div class="card border-0 d-flex flex-column align-items-center justify-content-center text-cente"
+                                            style="flex:1; min-width:0; height:220px; background:#edf3fc; border-radius:12px; padding:20px 5px;">
+
+                                            <div class="number mx-auto mb-3"
+                                                style="width:60px; height:60px; background:#202b68; color:white; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:19px; font-weight:700;border-left:5px solid #e69a00">
+                                                05
+                                            </div>
+
+                                            <h3 style="color:#202b68; font-size:25px; font-weight:700;">
+                                                Prototype
+                                            </h3>
+                                        </div>
+                                        <div style="color:#e69a00; font-size:20px; flex-shrink:0;">
+                                            <i class="fa-solid fa-right-long"></i>
+                                        </div>
+                                        <!--card 6-->
+                                        <div class="card border-0 d-flex flex-column align-items-center justify-content-center text-cente"
+                                            style="flex:1; min-width:0; height:220px; background:#edf3fc; border-radius:12px; padding:20px 5px;">
+
+                                            <div class="number mx-auto mb-3"
+                                                style="width:60px; height:60px; background:#202b68; color:white; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:19px; font-weight:700;border-left:5px solid #e69a00">
+                                                06
+                                            </div>
+
+                                            <h3 style="color:#202b68; font-size:25px; font-weight:700;">
+                                                Test
+                                            </h3>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <p
+                                    style="color:#ffffff; font-size:12px; line-height:1.6; margin-top:15px; margin-bottom:5px;">
+                                    Detailed on the following slides →
+
+                                </p>
+
+                                <p style="color:#ffffff; font-size:12px; text-align:end; margin:0;">
+                                    06
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <!--slide 7-->
+                     <!-- slide 7-->
+
+
+                    <div class="carousel-item">
+
+                        <div class="d-flex flex-column justify-content-center bg-subtle-warning p-9 bg-2 rounded-5"
+                            style="height:600px; min-height:600px; padding:40px 35px; background-color:white;">
+
+                            <!-- Heading -->
+                            <div class="overview mb-4">
+                                <span class="label" style="color:#e69a00; font-size:15px; font-weight:700;">
+                                    STEP 04 — FIGMA DESIGN PROCESS
+                                </span>
+
+                                <h2
+                                    style="color:#202b68; font-family:Poppins,serif; font-size:32px; font-weight:bold; margin-top:8px;">
+                                    Empathize & Define
+                                </h2>
+                            </div>
+
+                            <!-- Description -->
+                            <div class="row cap-4">
+                                <div class="col-6">
+                                    <div style="height:100%; min-height:270px; background:#eef3fc;
+                            border-radius:15px; padding:25px;
+                            border-top:5px solid #202b68;">
+
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span style="font-size:13px; font-weight:700;
+                                     color:#758098; letter-spacing:1px;">
+                                                PHASE 01
+                                            </span>
+
+                                            <span style="width:42px; height:42px; border-radius:50%;
+                                     background:#202b68; color:white;
+                                     display:flex; align-items:center;
+                                     justify-content:center; font-weight:700;">
+                                                01
+                                            </span>
+                                        </div>
+
+                                        <h5 style="color:#202b68; font-weight:700; margin-bottom:15px;">
+                                            Empathize
+                                        </h5>
+
+                                        <p style="font-size:14px; color:#758098; margin-bottom:15px;">
+                                            Understand the website, audience, and project requirements.
+                                        </p>
+
+                                        <ul style="color:#202b68; font-size:14px;
+                               line-height:1.8; padding-left:20px;">
+                                            <li>Study the existing website, product, and
+                                                animation script gathered in Steps 02–03.</li>
+                                            <li>Understand expo audience expectations,
+                                                brand tone, and the story the animation team
+                                                is telling.</li>
+                                            <li>Note which sections rely on production assets
+                                                (360° and video clips) vs. standard content.</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div style="height:100%; min-height:270px; background:#ffedc1;
+                            border-radius:15px; padding:25px;
+                            border-top:5px solid #e69a00;">
+
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span style="font-size:13px; font-weight:700;
+                                     color:#ffa600; letter-spacing:1px;">
+                                                PHASE 02
+                                            </span>
+
+                                            <span style="width:42px; height:42px; border-radius:50%;
+                                     background:#e69a00; color:white;
+                                     display:flex; align-items:center;
+                                     justify-content:center; font-weight:700;">
+                                                02
+                                            </span>
+                                        </div>
+
+                                        <h5 style="color:#202b68; font-weight:700; margin-bottom:15px;">
+                                            Define
+
+                                        </h5>
+
+                                        <p style="font-size:14px; color:#758098; margin-bottom:15px;">
+                                            Understand the website structure, define section goals, and identify the
+                                            required content and assets.
+                                        </p>
+
+                                        <ul style="color:#202b68; font-size:14px;
+                               line-height:1.8; padding-left:20px;">
+                                            <li>Lock the landing page structure identified in
+                                                Step 03 — Navbar through Footer.</li>
+                                            <li>Set goals for each section: what it must
+                                                communicate and which asset feeds it.
+                                            </li>
+                                            <li>The sections’ details will change based on the
+                                                existing website.
+                                            </li>
+                                        </ul>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+                            <div class="text-end container-fluid px-0 mt-3">
+                                <span style="color:#758098; font-size:13px;  margin-top:3px">07</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!--slide 8-->
+                      <div class="carousel-item">
+
+                        <div class="d-flex flex-column justify-content-center bg-subtle-warning p-9 bg-2 rounded-5"
+                            style="height:600px; min-height:600px; padding:40px 35px; background-color:white;">
+
+                            <!-- Heading -->
+                            <div class="overview mb-4">
+                                <span class="label" style="color:#e69a00; font-size:15px; font-weight:700;">
+                                    STEP 04 — FIGMA DESIGN PROCESS
+                                </span>
+
+                                <h2
+                                    style="color:#202b68; font-family:Poppins,serif; font-size:32px; font-weight:bold; margin-top:8px;">
+                                    Ideate & Design
+                                </h2>
+                            </div>
+
+                            <!-- Description -->
+                            <div class="row cap-4">
+                                <div class="col-6">
+                                    <div style="height:100%; min-height:270px; background:#eef3fc;
+                            border-radius:15px; padding:25px;
+                            border-top:5px solid #202b68;">
+
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span style="font-size:13px; font-weight:700;
+                                     color:#758098; letter-spacing:1px;">
+                                                PHASE 03
+                                            </span>
+
+                                            <span style="width:42px; height:42px; border-radius:50%;
+                                     background:#202b68; color:white;
+                                     display:flex; align-items:center;
+                                     justify-content:center; font-weight:700;">
+                                                03
+                                            </span>
+                                        </div>
+
+                                        <h5 style="color:#202b68; font-weight:700; margin-bottom:15px;">
+                                            Ideate
+                                        </h5>
+
+                                        <p style="font-size:14px; color:#758098; margin-bottom:15px;">
+                                            Explore creative layout ideas, visual arrangements, and alternative section
+                                            designs to establish an engaging page structure. </p>
+
+                                        <ul style="color:#202b68; font-size:14px;
+                               line-height:1.8; padding-left:20px;">
+                                            <li>Explore layout options for the Hero, Products,
+                                                and video-driven sections.
+                                            </li>
+                                            <li>Brainstorm how the 360° view and video clips
+                                                sit visually within the page flow.</li>
+                                            <li> Sketch quick alternatives for sections that vary
+                                                by source website.
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div style="height:100%; min-height:270px; background:#ffedc1;
+                            border-radius:15px; padding:25px;
+                            border-top:5px solid #e69a00;">
+
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span style="font-size:13px; font-weight:700;
+                                     color:#ffa600; letter-spacing:1px;">
+                                                PHASE 04
+                                            </span>
+
+                                            <span style="width:42px; height:42px; border-radius:50%;
+                                     background:#e69a00; color:white;
+                                     display:flex; align-items:center;
+                                     justify-content:center; font-weight:700;">
+                                                04
+                                            </span>
+                                        </div>
+
+                                        <h5 style="color:#202b68; font-weight:700; margin-bottom:15px;">
+                                            Design
+
+                                        </h5>
+
+                                        <p style="font-size:14px; color:#758098; margin-bottom:15px;">
+                                            Create high-fidelity Figma designs with brand styling, typography, imagery,
+                                            and media assets.
+                                        </p>
+
+                                        <ul style="color:#202b68; font-size:14px;
+                               line-height:1.8; padding-left:20px;">
+                                            <li>Build the high-fidelity mockup directly in
+                                                Figma, following the Step 03 order.</li>
+                                            <li>Apply brand styling, imagery, color theory,
+                                                typography and copy across every section.
+                                            </li>
+                                            <li>Place placeholders for animation-team assets
+                                                (360°, Video Clips 01 & 02).
+                                            </li>
+                                        </ul>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+                            <div class="text-end container-fluid px-0 mt-3">
+                                <span style="color:#758098; font-size:13px;  margin-top:3px">08</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--slide 9-->
+ <!--slide 9-->
+                    <div class="carousel-item">
+
+                        <div class="d-flex flex-column justify-content-center bg-subtle-warning p-9 bg-2 rounded-5"
+                            style="height:600px; min-height:600px; padding:40px 35px; background-color:white;">
+
+                            <!-- Heading -->
+                            <div class="overview mb-4">
+                                <span class="label" style="color:#e69a00; font-size:15px; font-weight:700;">
+                                    STEP 04 — FIGMA DESIGN PROCESS
+                                </span>
+
+                                <h2
+                                    style="color:#202b68; font-family:Poppins,serif; font-size:32px; font-weight:bold; margin-top:8px;">
+                                    Prototype & Test
+                                </h2>
+                            </div>
+
+                   
+                            <div class="row cap-4">
+                                <div class="col-6">
+                                    <div class="card-one" style="height:100%; min-height:270px; background:#eef3fc;
+                            border-radius:15px; padding:25px;
+                            border-top:5px solid #202b68;">
+
+                                        <div class=" d-flex justify-content-between align-items-center mb-3">
+                                            <span style="font-size:13px; font-weight:700;
+                                     color:#758098; letter-spacing:1px;">
+                                                PHASE 05
+                                            </span>
+
+                                            <span style="width:42px; height:42px; border-radius:50%;
+                                     background:#202b68; color:white;
+                                     display:flex; align-items:center;
+                                     justify-content:center; font-weight:700;">
+                                                05
+                                            </span>
+                                        </div>
+
+                                        <h5 style="color:#202b68; font-weight:700; margin-bottom:15px;">
+                                            Prototype
+                                        </h5>
+
+                                        <p style="font-size:14px; color:#758098; margin-bottom:15px;">
+                                            Explore creative layout ideas, visual arrangements, and alternative section
+                                            designs to establish an engaging page structure. </p>
+
+                                        <ul style="color:#202b68; font-size:14px;
+                               line-height:1.8; padding-left:20px;">
+                                            <li>Link the Figma frames into an interactive,
+                                                clickable prototype.
+
+                                            </li>
+                                            <li>Simulate scroll behavior and embedded video
+                                                / 360° interaction points.
+                                            </li>
+                                            <li> Preview navbar links and in-page navigation
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div style="height:100%; min-height:270px; background:#ffedc1;
+                            border-radius:15px; padding:25px;
+                            border-top:5px solid #e69a00;">
+
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span style="font-size:13px; font-weight:700;
+                                     color:#ffa600; letter-spacing:1px;">
+                                                PHASE 06
+                                            </span>
+
+                                            <span style="width:42px; height:42px; border-radius:50%;
+                                     background:#e69a00; color:white;
+                                     display:flex; align-items:center;
+                                     justify-content:center; font-weight:700;">
+                                                06
+                                            </span>
+                                        </div>
+
+                                        <h5 style="color:#202b68; font-weight:700; margin-bottom:15px;">
+                                            Test
+
+                                        </h5>
+
+                                        <p style="font-size:14px; color:#758098; margin-bottom:15px;">
+                                            Create high-fidelity Figma designs with brand styling, typography, imagery,
+                                            and media assets.
+                                        </p>
+
+                                        <ul style="color:#202b68; font-size:14px;
+                               line-height:1.8; padding-left:20px;">
+                                            <li>Walk through the prototype internally against
+                                                the Step 03 checklist.</li>
+                                            <li>Meet Client’s/website needs and confirm
+                                                animation assets are correctly placed.
+
+                                            </li>
+                                            <li>Iterate the Figma design until it is ready for QC
+                                                or Self analysis by designers.
+                                            </li>
+                                        </ul>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+                            <div class="text-end container-fluid px-0 mt-3">
+                                <span style="color:#758098; font-size:13px;  margin-top:3px">09</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--slide 10-->
+                     <!--step 10-->
+                <div class="carousel-item">
+    <div class="d-flex flex-column justify-content-center bg-subtle-warning p-9 bg-2 rounded-5"
+        style="height:600px; min-height:600px; padding: 30px 40px; background-color: white;">
+
+        <div class="overview mb-4">
+
+            <span class="label" style="color: #e69a00; font-size: 15px; font-weight: 700;">
+                STEP 05
+            </span>
+
+            <h2 style="color: #202b68; font-family: Poppins, serif; font-size: 32px; font-weight: bold; margin-top: 8px;">
+                Quality Check & Development Handoff
+            </h2>
+ <p style="color: #202b68; font-size: 19px; line-height: 1.6; margin-bottom: 25px;">
+                        Once the Figma design is finalized, it goes through a quality check before
+                        being submitted to the Development team for build.
+                    </p>
+       
+           
+        </div>
+
+            <!-- list -->
+            <class class="row align-items-center">
+                <div class="col-5 ">
+
+                    <!-- 1 -->
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <button class="check-btn flex-shrink-0">
+                            <i class="fa-solid fa-check-double" style="color: white; font-size: 18px;"></i>
+                        </button>
+                        <p style="color: #202b68; font-size: 18px; font-weight: 600; margin: 0; line-height: 1.4;">
+                            Content accuracy
+                        </p>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <button class="check-btn flex-shrink-0">
+                            <i class="fa-solid fa-check-double" style="color: white; font-size: 18px;"></i>
+                        </button>
+                        <p style="color: #202b68; font-size: 19px; font-weight: 600; margin: 0; line-height: 1.4;">
+                            Visual & brand consistency
+                        </p>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <button class="check-btn flex-shrink-0">
+                            <i class="fa-solid fa-check-double" style="color: white; font-size: 18px;"></i>
+                        </button>
+                        <p style="color: #202b68; font-size: 19px; font-weight: 600; margin: 0; line-height: 1.4;">
+                            Animation asset placement
+                        </p>
+                    </div>
+
+                    <!-- Point 4 -->
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <button class="check-btn flex-shrink-0">
+                            <i class="fa-solid fa-check-double" style="color: white; font-size: 18px;"></i>
+                        </button>
+                        <p style="color: #202b68; font-size: 19px; font-weight: 600; margin: 0; line-height: 1.4;">
+                            Section order matches Step 03 (some sections and designs change according to websites).
+                        </p>
+                    </div>
+                    </div>
+                      <div class="col-7  ">
+                                    <div class="row align-items-center gap-3  border-top:5px solid #e69a00;">
+
+                                        <div class="col">
+                                            <div class="process-card"
+                                                style="height: 145px; background-color: #edf3fc; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; color: #202b68; font-size: 16px; font-weight: 700; box-shadow: 0 3px 7px rgba(0,0,0,0.10);border-top:5px solid #202b68">
+                                               Figma Design
+(QC Passed)
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-auto px-1">
+                                            <i class="fa-solid fa-right-long"
+                                                style="color: #e69a00; font-size: 22px;"></i>
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="process-card"
+                                                style="min-height: 145px; background-color: #cadcfc; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; color: #202b68; font-size: 16px; font-weight: 700; box-shadow: 0 3px 7px rgba(0,0,0,0.10);border-top:5px solid #e69a00">
+                                               Submitted to
+Development Team
+                                            </div>
+                                        </div>
+
+                                       
+
+                                    </div>
+                                </div>
+           
+ <p style="color:#141cab; font-size:16px; line-height:1.6; margin-top:15px; margin-bottom:5px; font-weight:bold;">
+    Note: Once the website is live and animations are done, dummy videos on the live website are replaced with original videos.
+</p>
+            <div class="text-end mt-4">
+                <span style="color: #758098; font-size: 14px;">10</span>
+            </div>
+            </div>
+
+         
+           
+
+           
+
+        </div>
+
+        <!--slide 11-->
+<div class="carousel-item">
+                        <div class="d-flex flex-column justify-content-center bg-subtle-warning p-9 bg-2 rounded-5 "
+                            style="height:600px; min-height:600px; padding: 60px 65px; background-color: #202b68;">
+
+                            <div class="overview mb-3 ">
+                                <span class="label" style="color: #e69a00; font-size: 15px; font-weight: 700;">
+                                    PROCESS SUMMARY
+                                </span>
+
+                                <h2 
+                                    style="color: #ffffff; font-family: Poppins , serif; font-size: 32px; font-weight: bold; margin-top: 8px;">
+Expo to Development, End to End
+                                </h2>
+                            </div>
+
+                             
+                            <div class="  mt-4" style="width: 70%; ">
+                                        <div class="d-flex align-items-center mb-3 p-2 rounded-3 process"
+                                            style="background:#eef3fc; min-height:60px; ">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                01
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68; font-size: 19px;"> Shortlist confirmed & Digital Marketing team updated in sheet</strong>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3 p-2 rounded-3 process"
+                                            style="background:#eef3fc; min-height:60px; ">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                02
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68; font-size: 19px;">Mockup created from product + Animation team's script</strong>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3 p-2 rounded-3 process"
+                                            style="background:#eef3fc; min-height:60px;">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                03
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68; font-size: 19px;"> Existing website analyzed to define the 10-section landing page structure
+                                            </strong>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3 p-2 rounded-3 process"
+                                            style="background:#eef3fc; min-height:60px;">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                04
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68; font-size: 19px;">Figma design built via Empathize → Define → Ideate → Design → Prototype → Test. </strong>
+                                         
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3 p-2 rounded-3 process"
+                                            style="background:#eef3fc; min-height:60px;">
+                                            <div
+                                                style="width:38px;height:38px;background:#202b68;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                                05
+                                            </div>
+                                            <strong class="ms-3" style="color:#202b68; font-size: 19px;"> QC completed and design submitted to the Development team</strong>
+                                        </div>
+                                    </div>
+
+
+                                   
+                                   
+                                           
+
+                                    <div class="text-end mt-3">
+                                        <span style="color: #758098; font-size: 13px;">11</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                </div>
+
+                <!-- buttons below the slide -->
+                <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                    <button class="slide-nav-btn" type="button" data-bs-target="#carouselExampleContent" data-bs-slide="prev">
+                        <i class="fa-solid fa-arrow-left"></i> Previous
+                    </button>
+                    <button class="slide-nav-btn" type="button" data-bs-target="#carouselExampleContent" data-bs-slide="next">
+                        Next <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
